@@ -20,25 +20,33 @@
       searchForm = document.querySelector(".search-form"),
       searchLogin = document.querySelector(".login-form");
 
-    document.querySelector("#menu-btn").addEventListener("click", function () {
+    // Menu Button Toggle
+    document.querySelector("#menu-btn").onclick = () => {
       navbar.classList.toggle("active");
       searchForm.classList.remove("active");
       searchLogin.classList.remove("active");
-    });
+    };
 
-    document
-      .querySelector("#search-btn")
-      .addEventListener("click", function () {
-        searchForm.classList.toggle("active");
-        searchLogin.classList.remove("active");
-        navbar.classList.remove("active");
-      });
-
-    document.querySelector("#login-btn").addEventListener("click", function () {
-      searchLogin.classList.toggle("active");
-      searchForm.classList.remove("active");
+    // Search Form Toggle
+    document.querySelector("#search-btn").onclick = () => {
+      searchForm.classList.toggle("active");
       navbar.classList.remove("active");
-    });
+      searchLogin.classList.remove("active");
+    };
+
+    // Login Form Toggle
+    document.querySelector("#login-btn").onclick = () => {
+      searchLogin.classList.toggle("active");
+      navbar.classList.remove("active");
+      searchForm.classList.remove("active");
+    };
+
+    // Close all forms when window is scrolled
+    window.onscroll = () => {
+      navbar.classList.remove("active");
+      searchForm.classList.remove("active");
+      searchLogin.classList.remove("active");
+    };
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({

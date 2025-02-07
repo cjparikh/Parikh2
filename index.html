@@ -97,6 +97,48 @@
 
     <!-- Navbar End -->
 
+    <!-- Search Form -->
+    <div class="search-form">
+      <div class="search-form-content">
+        <i class="fa fa-search"></i>
+        <input type="search" id="search-box" placeholder="Search here..." />
+        <i class="fas fa-times" id="close-search"></i>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form">
+      <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="">
+          <h3>sign in</h3>
+          <span>username</span>
+          <input
+            type="email"
+            name=""
+            class="box"
+            placeholder="enter your email"
+            id=""
+          />
+          <span>password</span>
+          <input
+            type="password"
+            name=""
+            class="box"
+            placeholder="enter your password"
+            id=""
+          />
+          <div class="checkbox">
+            <input type="checkbox" name="" id="remember-me" />
+            <label for="remember-me">remember me</label>
+          </div>
+          <input type="submit" value="sign in" class="btn" />
+          <p>forget password ? <a href="#">click here</a></p>
+          <p>don't have an account ? <a href="#">create one</a></p>
+        </form>
+      </div>
+    </div>
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
       <div class="owl-carousel header-carousel position-relative">
@@ -214,7 +256,7 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Service Start -->
+    <!-- Categories Start -->
     <div class="container-xxl py-5">
       <div class="container">
         <div class="section-title text-center">
@@ -225,19 +267,18 @@
           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
             <div class="service-item">
               <div class="overflow-hidden">
-                <img
+                <!-- <img
                   class="img-fluid"
                   src="img/categories/castor.jpg"
                   alt="Castor Seeds"
-                />
+                /> -->
               </div>
               <div
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Castor (Arandi)</h4>
-                <p>Premium quality castor seeds for optimal yield</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -249,7 +290,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/cumin.jpg"
+                  src="images/Cumin(Jeera)/cumincard.jpg"
                   alt="Cumin Seeds"
                 />
               </div>
@@ -257,9 +298,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Cumin (Jeera)</h4>
-                <p>High-grade cumin seeds for spice cultivation</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -271,7 +311,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/fennel.jpg"
+                  src="images/Fennel(Saunf)/fennelcard.jpg"
                   alt="Fennel Seeds"
                 />
               </div>
@@ -279,9 +319,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Fennel (Saunf)</h4>
-                <p>Superior fennel seeds for better production</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -301,9 +340,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Gram Seeds (Chana)</h4>
-                <p>Quality gram seeds for enhanced yield</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -313,19 +351,26 @@
           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="service-item">
               <div class="overflow-hidden">
-                <img
+                <!-- <img
                   class="img-fluid"
                   src="img/categories/greengram.jpg"
                   alt="Green Gram"
-                />
+                /> -->
+                <a
+                  title="Sanjay Acharya, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Green_Mung_Beans.jpg"
+                  ><img
+                    width="1024"
+                    alt="Green Mung Beans"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Green_Mung_Beans.jpg/1024px-Green_Mung_Beans.jpg?20171105082906"
+                /></a>
               </div>
               <div
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Green Gram (Moong)</h4>
-                <p>Premium quality green gram seeds</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -345,9 +390,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Isabgol</h4>
-                <p>High-quality isabgol seeds for cultivation</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -359,7 +403,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/millet.jpg"
+                  src="images/Millet(Bajra)/milletcard.jpg"
                   alt="Millet Seeds"
                 />
               </div>
@@ -367,9 +411,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Millet (Bajra)</h4>
-                <p>Superior millet seeds for better harvest</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -381,7 +424,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/mustard.jpg"
+                  src="images/Mustard (Sarson)/mustardcard.jpg"
                   alt="Mustard Seeds"
                 />
               </div>
@@ -389,9 +432,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Mustard (Sarson)</h4>
-                <p>Premium mustard seeds for oil production</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -403,7 +445,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/sesame.jpg"
+                  src="images/Sesame(Til)/sesamecard.jpg"
                   alt="Sesame Seeds"
                 />
               </div>
@@ -411,9 +453,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Sesame (Til)</h4>
-                <p>High-grade sesame seeds for cultivation</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -425,7 +466,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/sorghum.jpg"
+                  src="images/Sorghum(Jowar )/sorghumcard.jpg"
                   alt="Sorghum Seeds"
                 />
               </div>
@@ -433,9 +474,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Sorghum (Jowar)</h4>
-                <p>Quality sorghum seeds for better yield</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -447,7 +487,7 @@
               <div class="overflow-hidden">
                 <img
                   class="img-fluid"
-                  src="img/categories/wheat.jpg"
+                  src="images/Wheat(Gehun)/whearcard.jpg"
                   alt="Wheat Seeds"
                 />
               </div>
@@ -455,9 +495,8 @@
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Wheat (Gehun)</h4>
-                <p>Premium wheat seeds for cultivation</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -467,19 +506,21 @@
           <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
             <div class="service-item">
               <div class="overflow-hidden">
-                <img
-                  class="img-fluid"
-                  src="img/categories/blackgram.jpg"
-                  alt="Black Gram Seeds"
-                />
+                <a
+                  title="Sanjay Acharya, CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons"
+                  href="https://commons.wikimedia.org/wiki/File:Black_gram.jpg"
+                  ><img
+                    width="512"
+                    alt="Black gram"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Black_gram.jpg/512px-Black_gram.jpg?20080221053232"
+                /></a>
               </div>
               <div
                 class="p-4 text-center border border-5 border-light border-top-0"
               >
                 <h4 class="mb-3">Black Gram (Urad Dal)</h4>
-                <p>Superior black gram seeds for farming</p>
                 <a class="fw-medium" href=""
-                  >View Details<i class="fa fa-arrow-right ms-2"></i
+                  >View Products<i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
             </div>
@@ -487,7 +528,7 @@
         </div>
       </div>
     </div>
-    <!-- Service End -->
+    <!-- Categories End -->
 
     <!-- Why Us Section -->
     <section class="section bg-light whyus">

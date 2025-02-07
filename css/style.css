@@ -6,15 +6,28 @@
   --green: green;
   --black: #130f40;
   --light-color: #666;
-  --box-shadow: 0 0.1rem 1rem rgba(0, 0, 0.1);
-  --border: 2rem solid rgba(0, 0, 0.1);
-  --outline: 0.1rem solid rgba(0, 0, 0.1);
+  --box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --transition: all 0.3s ease-in-out;
 }
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
 #spinner {
   display: none !important;
 }
 
-/* .fw-medium {
+.fw-medium {
   font-weight: 500 !important;
 }
 
@@ -24,7 +37,7 @@
 
 .fw-black {
   font-weight: 900 !important;
-} */
+}
 
 .back-to-top {
   position: fixed;

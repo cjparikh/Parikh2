@@ -1,9 +1,93 @@
 (function ($) {
   "use strict";
 
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get DOM elements
+    const searchBtn = document.querySelector("#search-btn");
+    const loginBtn = document.querySelector("#login-btn");
+    const menuBtn = document.querySelector("#menu-btn");
+    const searchForm = document.querySelector(".search-form");
+    const loginForm = document.querySelector(".login-form");
+    const navbar = document.querySelector(".navbar-nav");
+    const closeSearch = document.querySelector("#close-search");
+    const closeLogin = document.querySelector("#close-login-btn");
+
+    // Form toggle functions
+    searchBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      loginForm.classList.remove("active");
+      navbar.classList.remove("active");
+      searchForm.classList.toggle("active");
+      navbar.classList.remove("show-menu");
+    });
+
+    loginBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      searchForm.classList.remove("active");
+      navbar.classList.remove("active");
+      loginForm.classList.toggle("active");
+      navbar.classList.remove("show-menu");
+    });
+
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      searchForm.classList.remove("active");
+      loginForm.classList.remove("active");
+      navbar.classList.toggle("active");
+    });
+
+    // Close button handlers
+    closeSearch?.addEventListener("click", () =>
+      searchForm.classList.remove("active")
+    );
+    closeLogin?.addEventListener("click", () =>
+      loginForm.classList.remove("active")
+    );
+
+    // Close forms when clicking outside
+    document.addEventListener("click", (e) => {
+      if (
+        !e.target.closest(".search-form") &&
+        !e.target.closest("#search-btn") &&
+        !e.target.closest(".login-form") &&
+        !e.target.closest("#login-btn") &&
+        !e.target.closest(".navbar-nav") &&
+        !e.target.closest("#menu-btn")
+      ) {
+        searchForm.classList.remove("active");
+        loginForm.classList.remove("active");
+        navbar.classList.remove("active");
+      }
+    });
+
+    // Close forms on scroll
+    window.addEventListener("scroll", () => {
+      searchForm.classList.remove("active");
+      loginForm.classList.remove("active");
+      navbar.classList.remove("active");
+    });
+
+    // Menu Toggle
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navbar.classList.toggle("show-menu");
+
+      // Close other forms when menu opens
+      // searchForm.classList.remove("active");
+      // loginForm.classList.remove("active");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".navbar-nav") && !e.target.closest("#menu-btn")) {
+        navbar.classList.remove("show-menu");
+      }
+    });
+  });
+
   $(document).ready(function () {
     // Spinner
-    setTimeout(() => {
+    setTimeout(function () {
       $("#spinner").removeClass("show");
     }, 1);
 
@@ -12,41 +96,12 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
-      $(".sticky-top").toggleClass("shadow-sm", $(this).scrollTop() > 300);
+      if ($(this).scrollTop() > 300) {
+        $(".sticky-top").addClass("shadow-sm");
+      } else {
+        $(".sticky-top").removeClass("shadow-sm");
+      }
     });
-
-    // FORM TOGGLES
-    let navbar = document.querySelector(".navbar-nav"),
-      searchForm = document.querySelector(".search-form"),
-      searchLogin = document.querySelector(".login-form");
-
-    // Menu Button Toggle
-    document.querySelector("#menu-btn").onclick = () => {
-      navbar.classList.toggle("active");
-      searchForm.classList.remove("active");
-      searchLogin.classList.remove("active");
-    };
-
-    // Search Form Toggle
-    document.querySelector("#search-btn").onclick = () => {
-      searchForm.classList.toggle("active");
-      navbar.classList.remove("active");
-      searchLogin.classList.remove("active");
-    };
-
-    // Login Form Toggle
-    document.querySelector("#login-btn").onclick = () => {
-      searchLogin.classList.toggle("active");
-      navbar.classList.remove("active");
-      searchForm.classList.remove("active");
-    };
-
-    // Close all forms when window is scrolled
-    window.onscroll = () => {
-      navbar.classList.remove("active");
-      searchForm.classList.remove("active");
-      searchLogin.classList.remove("active");
-    };
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -77,7 +132,11 @@
 
     // Back to top button
     $(window).scroll(function () {
-      $(".back-to-top").toggleClass("visible", $(this).scrollTop() > 300);
+      if ($(this).scrollTop() > 300) {
+        $(".back-to-top").fadeIn("slow");
+      } else {
+        $(".back-to-top").fadeOut("slow");
+      }
     });
 
     $(".back-to-top").click(function () {
